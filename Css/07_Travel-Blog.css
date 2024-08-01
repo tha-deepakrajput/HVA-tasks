@@ -1,0 +1,33 @@
+h1 {
+    color: lightcoral;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+.post-content {
+    background-color: rgb(233, 215, 53);
+    padding: 20px;
+}

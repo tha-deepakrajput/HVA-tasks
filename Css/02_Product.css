@@ -1,0 +1,22 @@
+div h3 {
+    font-size: 50px;
+    color: lightpink;
+    background-color: black;
+}
+
+div p {
+    font-size: large;
+    color: rgb(58, 128, 30);
+}
+
+button[type='button'] {
+    width: 100px;
+    color: darkblue;
+    padding : 10px;
+    border-radius : 5px;
+}
+
+li:hover {
+    background-color: rgb(80, 248, 240);
+    border-radius: 7px;
+}

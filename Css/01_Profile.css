@@ -1,0 +1,19 @@
+h1 {
+    font-size: large;
+    color: greenyellow;
+}
+
+p {
+    font-size: small;
+    line-height: 200%;
+}
+
+.about-me {
+    padding: 10%;
+    background-color: blueviolet;
+}
+
+#profile-pic {
+    width: 60vh;
+    height: 80vh;
+}

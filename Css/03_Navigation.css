@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding: 25px;
+}
+
+nav {
+    background-color: black;
+}
+
+/* nav ul {
+    display: flex;
+} */
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Pseudo class selector */
+
+#item1::before {
+    content: '*';
+    color : white;
+}
+
+#item2::before {
+    content: '#';
+    color: yellow;
+}
+
+#item3::before {
+    content: '$';
+    color: yellowgreen;
+}
+
+#item4::before {
+    content: '@';
+    color: pink;
+}
+
+p {
+    color: white;
+    padding: 0.5rem;
+}
+
+/* Combinators  */
+
+ul > li > ul > li {
+    color: Yellow;
+}
+
+/* Adjacent sibling selector */
+
+
+ul + p {
+    color: lightseagreen;
+}  
