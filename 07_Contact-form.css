@@ -1,0 +1,12 @@
+h2 {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.two {
+  margin-left: 20px;
+}

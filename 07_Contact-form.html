@@ -3,26 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact-form</title>
+    <link rel="stylesheet" href="07_Contact-form.css">
 </head>
 <body>
     <h2>Contact Form</h2>
-    <form action="#" method="post">
-        <label for="">Full Name: </label>
-        <input type="text" name="fullname">
-        <br>
-        <label for="">Email Address: </label>
-        <input type="email" name="email">
-        <br>
-        <label for="">Gender: </label>
-        <input type="radio" name="gender" value="male">
-        <label for="">Male</label>
-        <input type="radio" name="gender" value="female">
-        <label for="">Female</label>
-        <br>
-        <label for="">Subscribe to Newsletter: </label>
-        <input type="checkbox" name="newsletter">
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    
+        <div class="main">
+            <div class="one">
+                <form action="#" method="post">
+                    <tr>
+                        <td>
+                            <label for="fullname">Full Name: </label>
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            <label for="email">Email Address: </label>
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            <label for="">Gender: </label>
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            <label for="check">Subscribe to Newsletter: </label>
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </form>
+            </div>
+            
+            <div class="two">
+                <form action="#" method="post">
+                    <tr>
+                        <td>
+                            <input type="text" id="fullname" name="fullname">
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr>
+                        <td>
+                            <input type="radio" name="gender" value="male" id="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </td>
+                    </tr>
+                    <br>
+                    <br>
+                    <tr id="checkbox">
+                        <td>
+                            <input id="check" type="checkbox" name="newsletter">
+                        </td>
+                    </tr>
+                </form>
+            </div>
+
+        </div>
 </body>
 </html>
