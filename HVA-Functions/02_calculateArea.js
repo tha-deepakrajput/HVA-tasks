@@ -4,7 +4,7 @@ function calculateArea(width, height) {
   return width * height
 }
 
-// console.log(`Area of a rectangle : ${calculateArea(5, 10)}`);
+console.log(`Area of a rectangle : ${calculateArea(5, 10)}`); 
 
 
 // 2. Calculate Area with default values : 
@@ -21,8 +21,8 @@ function calculateAreaWithDefault(width, height) {
   }
 }
 
-// console.log(`Area of a rectangle : ${calculateAreaWithDefault()}`)
-// console.log(`Area of a rectangle : ${calculateAreaWithDefault(5, 10)}`)
+console.log(`Area of a rectangle : ${calculateAreaWithDefault()}`) 
+console.log(`Area of a rectangle : ${calculateAreaWithDefault(5, 10)}`)
 
 
 // 3. rewrite calculate area function in the calculateAreaFunction variable : 
@@ -31,7 +31,7 @@ const calculateAreaFunction = function calculateArea(width, height) {
   return width * height
 }
 
-// console.log(calculateAreaFunction(5, 10))
+console.log(calculateAreaFunction(5, 10))
 
 
 // 4. Calculate area as an Arrow function : 

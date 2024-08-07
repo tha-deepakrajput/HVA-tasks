@@ -2,10 +2,10 @@
 
 
 function greet(name) {
-  console.log(`Hello, ${name}!`)
+  return `Hello, ${name}!`
 }
 
-// greet("Deepak Rajput")
+console.log(greet("Deepak Rajput"))
 
 
 
@@ -14,32 +14,31 @@ function greet(name) {
 
 function greetDefault(Guest) {
   if (!Guest){
-    console.log(`Hello, Guest!`)
+    return `Hello, Guest!`
   }
   else {
-    return console.log(`Hello, ${Guest}!`)
+    return `Hello, ${Guest}!`
   }
 }
 
-// greetDefault("deepakrajput")
+console.log(greetDefault("deepakrajput"))
 
 
 // 3. Store greet function in  greetfunction variable : 
 
 
 const greetfunction = function greet(name) {
-  return console.log(`Hello, ${name}!`)
+  return `Hello, ${name}!`
 }
 
-// greetfunction("deepak")
-
+console.log(greetfunction("deepak"))
 
 
 // 4. Arrow Function : 
 
 
 const greetArrow = (name) => {
-  console.log(`Hello, ${name}!`)
+  return `Hello, ${name}!`
 }
 
-greetArrow("deepak")
+console.log(greetArrow("deepak")) 
