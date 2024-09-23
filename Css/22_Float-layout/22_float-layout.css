@@ -27,5 +27,13 @@
 }
 
 .row {
+  height: 50%;
   margin-bottom: 20px;
+  border: 2px solid blue;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
 }

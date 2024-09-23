@@ -1,0 +1,310 @@
+
+
+@media screen and (max-width: 425px) {
+    .main-container .header {
+        height: 5vh;
+    }
+    .home .home1 .material-icons {
+        font-size: 11px;
+    }
+    .shorts .shorts1 img {
+        width: 10px;
+        height: 10px;
+    }
+    .subscription .subscription1 .material-icons {
+        font-size: 9px;
+    }
+    .you .you1 img {
+        width: 8px;
+        height: 8px;
+    }
+    .full-body .nav {
+        padding-top: 0;
+    }
+    .nav .home p {
+        font-size: 0.3rem;
+    }
+    .nav .shorts p {
+        font-size: 0.3rem;
+    }
+    .nav .subscription p {
+        font-size: 0.3rem;
+    }
+    .nav .you p {
+        font-size: 0.3rem;
+    }
+    .header .menu {
+        padding-left: 15px;
+    }
+    .header .menu i {
+        font-size: 0.7rem;
+        padding-top: 2px;
+    }
+    .header .youtube-icon img {
+        width: 15px;
+        height: 15px;
+    }
+    .youtube-icon .youtube {
+        font-size: 0.6rem;
+    }
+    #country-code {
+        font-size: 0.4rem;
+    }
+    .search-box .box1 input {
+        font-size: 0.45rem;
+        height: 2.5vh;
+        width: 95%;
+    }
+   .header .search-box {
+        margin-top: 6px;
+    }
+    .search-box .box1 {
+        width: 40vw;
+    }
+    .search-box .search-icon {
+        width: 7vw;
+        height: 2.7vh;
+    }
+    .search-box .search-icon img {
+        height: 2vh;
+    }
+    .mic-box i {
+        font-size: 0.6rem;
+        background-color: rgb(48, 48, 48);
+    }
+    .search-box .mic-box {
+        height: 2.8vh;
+        box-sizing: border-box;
+    }
+    .header .three-icons .create-video-icon i {
+        font-size: 0.7rem;
+    }
+    .header .three-icons .bell-icon i {
+        font-size: 0.65rem;
+    }
+    .header .three-icons .profile-icon img {
+        width: 15px;
+        height: 15px;
+    }
+    .header .three-icons {
+        width: 16%;
+        padding: 0px;
+        margin: 0;
+    }
+    .full-body .topic-box {
+        top: 5vh;
+    }
+    .full-body .topic-box .topics {
+        height: 2vh;
+        font-size: 6px;
+    }
+    .nav {
+        top: 4vh;
+    }
+    .container .full-body .content {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        width: 90%;
+        top: 0vh;
+    }
+    .container .full-body .content .content-box {
+        padding-bottom: 10px;
+    }
+    .image img {
+        border-radius: 4px;
+    }
+    .headings {
+        width: 70%;
+    }
+    .headings .heading1 {
+        height: 2vh;
+    }
+    .headings .text-h3 h3 {
+        height: 2vh;
+        font-size: 0.5rem;
+        line-height: 1;
+    }
+    .headings .heading2 {
+        height: 0.5vh;
+        font-size: 0.4rem;
+    }
+    .last-text .end-text1 {
+        height: 0.5vh;
+        font-size: 0.4rem;
+    }
+    .last-text .end-text2 {
+        height: 0.5vh;
+        font-size: 0.4rem;
+    }
+    .all-content .yt-profile {
+        width: 10%;
+        padding: 3px;
+    }
+    .all-content .dots button i {
+        font-size: 0.4rem;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        height: 6vh;
+    }
+    .home1 .material-icons {
+        font-size: 16px;
+    }
+    .shorts1 img {
+        width: 16px;
+        height: 16px;
+    }
+    .subscription1 .material-icons {
+        font-size: 15px;
+    }
+    .you1 img {
+        width: 13px;
+        height: 13px;
+    }
+    .home p {
+        font-size: 0.5rem;
+    }
+    .shorts p {
+        font-size: 0.5rem;
+    }
+    .subscription p {
+        font-size: 0.5rem;
+    }
+    .you p {
+        font-size: 0.5rem;
+    }
+    .menu i {
+        font-size: 1rem;
+    }
+    .youtube-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    span .youtube {
+        font-size: 0.9rem;
+    }
+    .box1 input {
+        font-size: 0.7rem;
+        height: 3.8vh;
+    }
+    .search-box {
+        margin-top: 5px;
+    }
+    .search-icon {
+        width: 3.6vw;
+        height: 4.1vh;
+    }
+    .search-icon img {
+        height: 2vh;
+    }
+    .mic-box i {
+        font-size: 0.6rem;
+        background-color: rgb(48, 48, 48);
+    }
+    .mic-box {
+        height: 3.8vh;
+        box-sizing: border-box;
+    }
+    .three-icons .create-video-icon i {
+        font-size: 1rem;
+    }
+    .three-icons .bell-icon i {
+        font-size: 1rem;
+    }
+    .three-icons .profile-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    .three-icons {
+        width: 18%;
+        padding-top: 5px;
+    }
+    .topic-box {
+        top: 6vh;
+    }
+    .topic-box .topics {
+        height: 3vh;
+        font-size: 10px;
+    }
+    .full-body .body-container {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        width: 90%;
+        top: 3vh;
+    }
+    .nav {
+        top: 4vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body-container {
+        width: 92%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        left: 8%;
+    }
+    .topic-box {
+        width: 92%;
+        left: 8%;
+    }
+    .menu {
+        padding-left: 20px;
+    }
+    .nav {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .body-container {
+        width: 92%;
+        left: 8%;
+    }
+    .content {
+        column-gap: 3vw;
+    }
+    .nav {
+        width: 8%;
+    }
+    .topic-box {
+        width: 92%;
+        left: 8%;
+    }
+    .topics {
+        height: 4.5vh;
+        margin: 0vh 0.6vw 0vh 0.6vw;
+        font-size: 0.9rem;
+        padding: 0px 10px 0px 10px;
+    }
+    .heading1 {
+        height: 5vh;
+    }
+    .menu {
+        padding-left: 28px;
+    }
+} 
+
+@media screen and (max-width: 1440px) {
+    .menu {
+        padding-left: 25px;
+    }
+    .box1 {
+        width: 42vw;
+    }
+    .search-icon {
+        width: 15%;
+    }
+    .mic-box {
+        width: 9%;
+    }
+    .youtube {
+        font-size: 1.35rem;
+    }
+    .header {
+        width: 100%;
+    }
+    .three-icons {
+        margin-right: 15px;
+    }   
+}

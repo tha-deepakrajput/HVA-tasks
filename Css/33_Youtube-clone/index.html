@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube clone</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="main-container">
+            <div class="header">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                    <span class="youtube-icon">
+                        <img src="https://img.icons8.com/color/48/ff0000/youtube-play.png" alt="youtube-play"/>
+                        <span class="youtube">YouTube <sup id="country-code">IN</sup></span>
+                    </span>
+                </div>
+
+                <div class="search-box">
+                    <div class="box1">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="search-icon">
+                        <img src="images/search-icon-removebg-preview.png" alt="">
+                    </div>
+                    <div class="mic-box">
+                        <div class="mic-icon">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="three-icons">
+                    <div class="create-video-icon">
+                        <i class='bx bx-video-plus'></i>
+                    </div>
+                    <div class="bell-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="profile-icon">
+                        <img src="images/profile icon .jpg" alt="profile images">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="full-body">
+            <!-- SIDE-BAR -->
+            <div class="nav">
+                <div class="home">
+                    <div class="home1">
+                        <i class="material-icons">&#xe88a;</i>
+                    </div>
+                    <p class="nav-p">Home</p>
+                </div>
+                <div class="shorts">
+                    <div class="shorts1">
+                        <img src="https://img.icons8.com/material-outlined/24/FFFFFF/youtube-shorts.png"
+                            alt="youtube-shorts" />
+                    </div>
+                    <p class="nav-p">Shorts</p>
+                </div>
+                <div class="subscription">
+                    <div class="subscription1">
+                        <i class="material-icons">&#xe064;</i>
+                    </div>
+                    <p class="nav-p">Subscriptions</p>
+                </div>
+                <div class="you">
+                    <div class="you1">
+                        <img src="images/you icon.png" alt="You-icon">
+                    </div>
+                    <p class="nav-p">You</p>
+                </div>
+            </div>
+            
+            <div class="topic-box blur-effect">
+                <div class="topics">All</div>
+                <div class="topics">JavaScipt</div>
+                <div class="topics">Gaming</div>
+                <div class="topics">Self-confidence</div>
+                <div class="topics">Podcasts</div>
+                <div class="topics">English(United States)</div>
+                <div class="topics">Chandler Bing</div>
+                <div class="topics">Vocal language</div>
+                <div class="topics">Battleground Mobile India</div>
+                <div class="topics">Dramedy</div>
+                <div class="topics">Data Structure</div>
+                <div class="topics">Pyschology</div>
+                <div class="topics">live</div>
+                <div class="topics">Body Building</div>
+                <div class="topics">Information</div>
+                <div class="topics">Recently Uploaded</div>
+                <div class="topics">Watched</div>
+                <div class="topics">New to you</div>
+            </div>
+
+            <!-- VIDEO CONTENT -->
+            <div class="body-container scroll-bar content">
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/2-image.jpg" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/3-image.jpg" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/4-image.jpg" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/5-image.jpg" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/6-iage.jpg" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="image">
+                        <img class="image" src="images/1st-image.webp" alt="thumbnail-image">
+                    </div>
+                    <div class="all-content">
+                        <div class="yt-profile">
+                            <img class="image" src="images/yt-profile.jpg" alt="profile-pic">
+                        </div>
+                        <div class="headings">
+                            <div class="heading1 text-h3">
+                                <h3>Image slider-With auto play and Manual Navigation buttons-Using css,HTML &</h3>
+                            </div>
+                            <div class="heading2 text-p">Coding Snow</div>
+                            <div class="last-text">
+                                <div class="end-text1">883k views</div>
+                                <div class="end-text2">1 year ago</div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <button type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
