@@ -13,7 +13,7 @@ colors[1] = "yellow"
 // console.log(colors[1]);
 
 // ADD AN ELEMENT TO COLORS : 
-colors[3] = "Black"
+colors[3] = "black"
 // console.log(colors);
 
 
@@ -62,7 +62,8 @@ colors.pop()
 console.log(colors);
 
 // indexOf() METHOD TO FIND THE INDEX OF THE ELEMENT : 
-console.log(colors.indexOf("blue"));
+console.log("index");
+console.log(colors.indexOf("black"));  
 
 
 // F. 
@@ -75,3 +76,5 @@ console.log(colors);
 for (let key in colors) {
     console.log(`${key} : ${colors[key]}`);    
 }
+
+console.log(colors);
