@@ -1,0 +1,3 @@
+function forEachArray(array, callback) {
+    
+}
