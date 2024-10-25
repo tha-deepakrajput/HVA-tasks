@@ -17,6 +17,7 @@ class Product {
     }
 }
 
+
 function displayProduct() {
     inventory.forEach(product => {
         console.log(`${product.name} - ${product.price}(${product.quantity})`);
@@ -24,12 +25,15 @@ function displayProduct() {
 }
 // displayProduct();
 
+
 function addProduct(id, name, price, quantity, category) {
     let newProduct = new Product(id, name, price, quantity, category)
     inventory.push(newProduct);
 }
-// addProduct(5, 'earphone', 300, 2, 'electronics');
-// console.log(inventory);
+addProduct(5, 'earphone', 300, 2, 'electronics');
+displayProduct()
+console.log(inventory);
+
 
 function updateProduct(id, quantity) {
     let updateElement = inventory.find(product => product.id === id);
@@ -41,10 +45,11 @@ function updateProduct(id, quantity) {
     }
 }
 // console.log(updateProduct(2, 500));
-// console.log(inventory);
+// displayProduct();
 
 function removeProduct(id) {
    inventory =  inventory.filter(product => product.id !== id);
 }
 removeProduct(1);
-console.log(inventory);
+// displayProduct();
+// console.log(inventory);
