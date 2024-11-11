@@ -10,17 +10,39 @@ async function getPosts() {
 
 getPosts();
 
+// let newDiv = document.createElement('div');
+// newDiv.id = 'UserId';
 
-// async function getPosts() {
-//     let response = await fetch(url);
+// async function getUserId() {
+//     let response = await fetch(`${url}?userId=${newDiv.id}`);
 //     console.log(response);
 //     let data = await response.json();
-
-//     // Check if data is an array and display posts
-//     if (Array.isArray(data)) {
-//         posts.innerHTML = data.map(post => `<p><strong>${post.title}</strong>: ${post.body}</p>`).join("");
-//     } else {
-//         posts.innerText = "No posts available";
-//     }
+//     console.log(data);
+//     newDiv.innerText = JSON.stringify(data);
+//     document.body.append(newDiv);
 // }
-// getPosts();
+
+// getUserId();
+
+
+let newDiv = document.createElement('div');
+newDiv.id = 'UserId';
+
+async function getUserId() {
+    let response = await fetch(`${url}?userId=${newDiv.id}`);
+    console.log(response);
+    
+    if (response.ok) {  // Check if the response status is OK
+        let data = await response.json();
+        console.log(data);
+        
+        // Convert data to a string if it is an object, or access specific properties as needed
+        newDiv.innerText = JSON.stringify(data);
+        
+        document.body.append(newDiv);
+    } else {
+        console.error("Failed to fetch data:", response.status);
+    }
+}
+
+getUserId();
