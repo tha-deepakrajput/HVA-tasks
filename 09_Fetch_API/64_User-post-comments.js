@@ -5,7 +5,7 @@
 //     postBox.innerHTML = '';
 //     let userId = document.querySelector('#inputUserId').value;
 
-//     if (userId <= 10) {
+//     if (userId >= 1 && userId <= 10) {
 //         fetchPosts(userId);
 //     }
 //     else {
@@ -21,6 +21,7 @@
 //         console.log(data);
 
 //         for (let element of data) {
+//             let userId = element.userId;
 //             let id = element.id;
 //             let title = element.title;
 //             let body = element.body;
@@ -32,6 +33,7 @@
 //             div.style.padding = '10px';
 
 //             div.innerHTML = `
+//                 <b>UserId</b> : ${userId} <br>
 //                 <b>Id</b> : ${id} <br>
 //                 <b>Title</b> : ${title} <br>
 //                 <b>Body</b> : ${body}
@@ -76,9 +78,9 @@
 //             commentBox.style.padding = '10px';
 
 //             commentBox.innerHTML = `
-//                 <b>Comment ID : </b> ${commentId}
-//                 <b>Name : </b> ${Name}
-//                 <b>Email : </b> ${Email}
+//                 <b>Comment ID : </b> ${commentId} <br>
+//                 <b>Name : </b> ${Name} <br>
+//                 <b>Email : </b> ${Email} <br>
 //                 <b>Comment Body : </b> ${commentBody}
 //             `
 //             commentContainer.appendChild(commentBox);
