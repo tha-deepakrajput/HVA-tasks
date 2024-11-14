@@ -36,11 +36,11 @@ else :
         for c in removeSpace_str1 : 
             if c == char : 
                 count1 += 1
-        
+
         for c in removeSpace_str2 : 
             if c == char : 
                 count2 += 2 
-        
+
         if count1 != count2 : 
             isAnagram = False
             break                
