@@ -1,4 +1,3 @@
 str = input('Enter the characters : ')
 
-for char in str : 
-    
+# for char in str : 
