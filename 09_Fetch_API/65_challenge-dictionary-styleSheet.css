@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+}
+
+#enterText {
+    width: 250px;
+    height: 40px;
+    font-size: large;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+label button {
+    width: 150px;
+    height: 40px;
+    font-size: large;
+}
+
+.container {
+    margin-bottom: 50px;
+}

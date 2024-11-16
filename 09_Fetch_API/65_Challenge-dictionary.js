@@ -26,7 +26,17 @@ async function fetchDefinition(wordData) {
         console.log(data);
 
         let definition = data[0].meanings[0].definitions[0].definition;
-        div.innerHTML = `Definition of ${wordData} : ${definition}`;
+        let partsOfSpeech = data[0].meanings[0].partOfSpeech;
+        let exampleSentence = data[0].meanings[0].definitions[0].example  || 'No Examples found';
+        let synonymOfWord = data[0].meanings[0].definitions[0].synonyms[0] || 'No Synonyms found';
+        let antonymOfWord = data[0].meanings[0].definitions[0].antonyms[0] || 'No Antonyms found';
+        div.innerHTML = `
+        <b>Definition of '${wordData}' </b> : ${definition} <br>
+        <b>Parts of Speech</b> : ${partsOfSpeech} <br>
+        <b>Example sentence</b> : ${exampleSentence} <br>
+        <b>Synonyms</b> : ${synonymOfWord} <br>
+        <b>Antonyms</b> : ${antonymOfWord}
+        `;
 
         dataDiv.appendChild(div);
     }
