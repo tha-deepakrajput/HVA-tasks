@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="66_Task_management-styleSheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Task Management App</h1>
+        </header>
+
+        <section class="task-form-section">
+            <h2>Add New Task</h2>
+            <form id="task-form" class="task-form">
+                <div class="form-row">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" placeholder="Enter Task Title" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="text-area">Task Description</label>
+                    <textarea id="text-area" placeholder="Enter Task Description"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="task-date">Due Date</label>
+                    <input type="date" id="task-date" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="task-priority">Task Priority</label>
+                    <select id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="filters-section">
+            <h2>Filters</h2>
+            <div class="filters">
+                <label for="task-filters">Filter by Priority</label>
+                <select id="task-filters">
+                    <option value="all-priority">All Priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button onclick="applyfilters()" class="btn btn-secondary">Apply Filter</button>
+            </div>
+        </section>
+
+        <section class="tasks-section">
+            <div class="pending-tasks">
+                <h2>Pending Tasks</h2>
+                <div id="pending-tasks-list"></div>
+            </div>
+
+            <div class="completed-tasks">
+                <h2>Completed Tasks</h2>
+                <div id="completed-tasks-list"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="66_Task-management.js"></script>
+</body>
+</html>
