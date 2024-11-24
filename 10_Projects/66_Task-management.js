@@ -1,97 +1,55 @@
-let taskForm = document.getElementById('task-form');
+const form = document.querySelector('form');
+const allTasks = document.querySelector('.all-tasks');
 
-const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+window.addEventListener('DOMContentLoaded', () => {
+    allTasks.innerHTML = '';
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach(task => displayTasks(task));
+})
 
-taskForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-    const title = document.getElementById('task-title').value.trim();
-    const discription = document.getElementById('text-area').value.trim();
-    const dueDate = document.getElementById('task-date').value;
-    const priority = document.getElementById('task-priority').value;
+    const title = document.getElementById('task-title').value;
+    const description = document.getElementById('task-description').value;
+    const dueDate = document.getElementById('due-date').value;
+    const taskPriority = document.getElementById('task-priority').value;
 
-    if (!title || !dueDate) {
-        alert('Title and Due date are required');
-    }
+    const task = {title, description, dueDate, priority: taskPriority}
 
-    const newTask = {
-        id: Date.now(),
-        title, 
-        discription,
-        dueDate,
-        priority,
-        complete: false
-    };
-    
-    tasks.push(newTask);
-    saveTasks();
-    renderTasks();
-    tasksform.reset();
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    displayTasks(task);
+
+    form.reset();
 });
 
+function displayTasks(task) {
+    const newTaskDiv = document.createElement('div');
 
-// HERE WE WILL RENDER THE TASKS : 
+    newTaskDiv.style.width = '200px'
+    newTaskDiv.style.border = '1px solid black';
+    newTaskDiv.style.padding = '10px';
+    newTaskDiv.style.margin = '10px';
 
-const pendingTasksDiv = document.querySelector('.pending-tasks');
-const completedTasksDiv = document.querySelector('.completed-tasks');
+    if (task.priority === 'Low') {
+        newTaskDiv.classList.add('low-priority');
+    } else if (task.priority === 'Medium') {
+        newTaskDiv.classList.add('medium-priority');
+    } else if (task.priority === 'High') {
+        newTaskDiv.classList.add('high-priority');
+    }
 
-function renderTasks() {
-    completedTasksDiv.innerHTML = '';
-    pendingTasksDiv.innerHTML = '';
-
-    tasks.forEach(element => {
-        const taskDiv = document.createElement('div');
-        taskDiv.className = `task ${element.completed?'completed': ''} priority-${element.priority}`;
-        taskDiv.innerHTML = `
-        <h3>${element.title}(${element.priority.toUpperCase()})</h3>
-        <p>${element.discription}</p>
-        <p>${element.dueDate}</p>
-        <button onclick="editTask(${element.id})">Edit</button>
-        <button onclick="deleteTask(${element.id})">Delete</button>
-        <button onclick="toggleCompletion(${element.id})">
-            ${element.completed ? 'Mark as pending' : 'Mark as completed'}
-        </button>
-        `;
-
-        if (element.completed) {
-            completedTasksDiv.appendChild(taskDiv);
-        }
-        else {
-            pendingTasksDiv.appendChild(taskDiv);
-        }
-    });
-}
-
-// FUNCTION TO EDIT THE TASK : 
-
-function editTask(id) {
-    const task = tasks.find((task) => task.id === id);
-
-    document.getElementById('task-title').value = task.title;
-    document.getElementById('text-area').value = task.discription;
-    document.getElementById('task-date').value = task.dueDate;
-    document.getElementById('task-priority').value = task.priority;
-
-    deleteTask(id);
+    newTaskDiv.innerHTML = `
+        <p class="para-border"><b>Task Title</b> : ${task.title}</p>
+        <p class="para-border"><b>Task Description</b>  : ${task.description}</p>
+        <p class="para-border"><b>Due Date</b>  : ${task.dueDate}</p>
+        <p class="para-border"><b>Task Priority</b>  : ${task.priority}<p>
+    `;
+    
+    allTasks.appendChild(newTaskDiv);
 }
 
 
-// FUNCTION TO DELETE THE TASK : 
-
-function deleteTask(id) {
-    tasks = tasks.filter((task) => task.id !== id);
-
-    saveTasks();
-    renderTasks();
-}
-
-
-// TOGGLING THE TASK COMPLETION : 
-
-function toggleCompletion(id) {
-    const task = tasks.find((task) => task.id === id)
-
-    task.completed = !task.completed;
-    saveTasks();
-    renderTasks();
-}

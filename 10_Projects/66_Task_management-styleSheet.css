@@ -1,139 +1,98 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+*{
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-}
-  
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
-/* Header */
-.app-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.app-header h1 {
-  font-size: 24px;
-  color: #333;
-}
-
-/* Form Section */
-.task-form-section {
-  margin-bottom: 30px;
-}
-
-.task-form h2 {
-  margin-bottom: 15px;
-  color: #555;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 15px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
-}
-
-label {
-  font-weight: bold;
-  color: #555;
-}
-
-input, textarea, select {
-  width: 100%;
+  min-height: 40vh;
+  text-align: center;
+  font-size: medium;
+  /* font-weight: 600; */
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+select {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 textarea {
-  resize: vertical;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+  font-size: small;
+  font-weight: 600;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+h3 {
+  margin: 3rem;
 }
 
 button {
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 4px;
+  width: 200px;
+  height: 40px;
+  font-size: large;
+  font-weight: 600;
+  background-color: greenyellow;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 
-.btn-primary {
-  background: #007BFF;
-  color: white;
-  border: none;
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
-.btn-primary:hover {
-  background: #0056b3;
-}
-
-.btn-secondary {
-  background: #6c757d;
-  color: white;
-  border: none;
-}
-
-.btn-secondary:hover {
-  background: #5a6268;
-}
-
-/* Filters Section */
-.filters-section {
-  margin-top: 30px;
-}
-
-.filters {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 15px;
-  align-items: center;
-}
-
-.filters label {
-  font-weight: bold;
-}
-
-.filters select {
+.all-tasks {
+  border: 1px solid black;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.filters button {
-  width: 100%;
+.para-border {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
 }
 
-/* Tasks Section */
-.tasks-section {
-  margin-top: 30px;
+.low-priority {
+  color: green;
+  background-color: pink;
 }
 
-.pending-tasks, .completed-tasks {
-  margin-bottom: 20px;
+.medium-priority {
+  color: orange;
 }
 
-h2 {
-  color: #333;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+.high-priority {
+  color: red;
 }
-
-#pending-tasks-list, #completed-tasks-list {
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fafafa;
-}
-
