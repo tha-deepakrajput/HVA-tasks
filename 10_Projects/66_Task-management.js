@@ -1,13 +1,15 @@
 const form = document.querySelector('form');
-const allTasks = document.querySelector('.all-tasks');
-let editIndex = null    // To track the index of the edit task..
+const pendingTasks = document.querySelector('.pending_tasks');
+const completedTasks = document.querySelector('.completed_tasks');
 
+let editIndex = null; // To track the index of the edit task..
+
+// Load tasks on page load
 window.addEventListener('DOMContentLoaded', () => {
-    allTasks.innerHTML = '';
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    tasks.forEach(task => displayTasks(task));
-})
+    refresh();
+});
 
+// Handle form submission
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -16,82 +18,96 @@ form.addEventListener('submit', (event) => {
     const dueDate = document.getElementById('due-date').value;
     const taskPriority = document.getElementById('task-priority').value;
 
-    const task = {title, description, dueDate, priority: taskPriority}
-
+    const task = { title, description, dueDate, priority: taskPriority, completed: false };
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
     if (editIndex !== null) {
-        tasks[editIndex] = task;
+        tasks[editIndex] = task; // Update task at edit index
         editIndex = null;
+    } else {
+        tasks.push(task); // Add new task
     }
-    else {
-        tasks.push(task);
-    }
-    
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    
-    allTasks.innerHTML = '';
-    tasks.forEach((task, index) => displayTasks(task, index));        // Re-render the task 
 
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    refresh(); // Re-render tasks
     form.reset();
 });
 
+// Display tasks in respective sections
 function displayTasks(task, index) {
-    const newTaskDiv = document.createElement('div');
-    newTaskDiv.classList.add('newDiv');
+    const taskDiv = document.createElement('div');
+    taskDiv.classList.add('task');
+    taskDiv.style.border = '1px solid black';
+    taskDiv.style.borderRadius = '10px';
+    taskDiv.style.padding = '10px';
+    taskDiv.style.margin = '10px';
 
-    newTaskDiv.style.width = '200px'
-    newTaskDiv.style.border = '1px solid black';
-    newTaskDiv.style.borderRadius = '10px'
-    newTaskDiv.style.padding = '10px';
-    newTaskDiv.style.margin = '10px';
-
-    if (task.priority === 'Low') {
-        newTaskDiv.classList.add('low-priority');
-    } else if (task.priority === 'Medium') {
-        newTaskDiv.classList.add('medium-priority');
-    } else if (task.priority === 'High') {
-        newTaskDiv.classList.add('high-priority');
-    }
-
-    newTaskDiv.innerHTML = `
-        <p class="para-border"><b>Task Title</b> : ${task.title}</p>
-        <p class="para-border"><b>Task Description</b>  : ${task.description}</p>
-        <p class="para-border"><b>Due Date</b>  : ${task.dueDate}</p>
-        <p class="para-border"><b>Task Priority</b>  : ${task.priority}<p>
+    taskDiv.innerHTML = `
+        <p><b>Title:</b> ${task.title}</p>
+        <p><b>Description:</b> ${task.description}</p>
+        <p><b>Due Date:</b> ${task.dueDate}</p>
+        <p><b>Priority:</b> ${task.priority}</p>
         <button class="editBtn">Edit</button>
         <button class="deleteBtn">Delete</button>
     `;
 
-    // To edit a task 
-    const editBtn = newTaskDiv.querySelector('.editBtn');
-    editBtn.addEventListener('click', () => editTask(index));
+    const toggleBtn = document.createElement('button');
+    toggleBtn.textContent = task.completed ? 'Mark as Pending' : 'Mark as Completed';
+    toggleBtn.addEventListener('click', () => toggleCompletion(index));
 
-    // To delete a task 
-    const deleteBtn = newTaskDiv.querySelector('.deleteBtn');
-    deleteBtn.addEventListener('click', () => deleteTask(index))
-    
-    allTasks.appendChild(newTaskDiv);
+    taskDiv.appendChild(toggleBtn);
+
+    // Add edit and delete functionality
+    taskDiv.querySelector('.editBtn').addEventListener('click', () => editTask(index));
+    taskDiv.querySelector('.deleteBtn').addEventListener('click', () => deleteTask(index));
+
+    // Append to respective section
+    if (task.completed) {
+        taskDiv.style.textDecoration = 'line-through';
+        taskDiv.style.backgroundColor = 'lightgreen';
+        completedTasks.appendChild(taskDiv);
+    } else {
+        taskDiv.style.textDecoration = 'none';
+        taskDiv.style.backgroundColor = 'lightcoral';
+        pendingTasks.appendChild(taskDiv);
+    }
 }
 
+// Toggle task completion
+function toggleCompletion(index) {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks[index].completed = !tasks[index].completed; // Toggle completion status
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    refresh(); // Re-render tasks
+}
 
+// Delete a task
 function deleteTask(index) {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    tasks.splice(index, 1) // To remove the task from the array 
-    localStorage.setItem('tasks', JSON.stringify(tasks));  // Update the local storage
-    allTasks.innerHTML = '';
-    tasks.forEach((task, idx) => displayTasks(task, idx));   // This will re-render the tasks
+    tasks.splice(index, 1); // Remove task
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    refresh(); // Re-render tasks
 }
 
+// Edit a task
 function editTask(index) {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     const task = tasks[index];
 
-    // popullate the form with the task details 
+    // Populate form with task details
     document.getElementById('task-title').value = task.title;
     document.getElementById('task-description').value = task.description;
     document.getElementById('due-date').value = task.dueDate;
     document.getElementById('task-priority').value = task.priority;
 
-    editIndex = index;
+    editIndex = index; // Set index for editing
+}
+
+// Refresh tasks display
+function refresh() {
+    pendingTasks.innerHTML = '';
+    completedTasks.innerHTML = '';
+
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach((task, index) => displayTasks(task, index));
 }
