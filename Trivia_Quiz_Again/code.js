@@ -54,7 +54,7 @@ function displayCategories(data) {
             // const quesDiv = document.createElement('div');
             // const quesHeading = document.createElement('h1');
             // quesHeading.textContent = 'Questions';
-            fetchQuestions()
+            fetchQuestions(category)
         })
     }
     document.body.appendChild(div);
@@ -64,8 +64,15 @@ async function fetchQuestions(category) {
     document.body.innerHTML = ''
     const quesDiv = document.createElement('div');
 
-    let response = await fetch(`https://the-trivia-api.com/v2/question?categories=${category}&difficulty=easy,medium,hard&limit=100`);
+    let response = await fetch(`https://the-trivia-api.com/v2/questions?categories=${category}&difficulty=easy,medium,hard&limit=6`);
     let data = await response.json();
     console.log(data);
-    quesDiv.textContent = data;
+    
+    data.forEach(ques => {
+        const p = document.createElement('p');
+        console.log(ques.question.text);
+        p.textContent = ques.question.text;
+        quesDiv.appendChild(p);
+    });
+    document.body.appendChild(quesDiv);
 }
