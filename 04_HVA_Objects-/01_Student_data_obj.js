@@ -76,6 +76,6 @@ topper.greet = function (greet) {
   console.log(`Hello, ${this.name}!`);
 }
 
-topper.greet()
+topper.greet();
 console.log(topper);
 
