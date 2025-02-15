@@ -38,6 +38,32 @@
     
     <div class="all-tasks">
     </div>
+    
+    <div class="filters">
+        <label for="filter-priority">Priority:</label>
+        <select id="filter-priority">
+            <option value="">All</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    
+        <label for="filter-due-date">Due Date:</label>
+        <select id="filter-due-date">
+            <option value="">All</option>
+            <option value="7-days">Next 7 Days</option>
+            <option value="overdue">Overdue</option>
+        </select>
+    
+        <label for="filter-status">Status:</label>
+        <select id="filter-status">
+            <option value="">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+    
+        <button id="apply-filters">Apply Filters</button>
+    </div>
 
     <div>
         <h3>Pending Tasks</h3>

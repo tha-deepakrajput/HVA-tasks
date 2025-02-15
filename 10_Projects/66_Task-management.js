@@ -103,6 +103,64 @@ function editTask(index) {
     editIndex = index; // Set index for editing
 }
 
+
+// JavaScript for filtering tasks
+const filterPriority = document.getElementById('filter-priority');
+const filterDueDate = document.getElementById('filter-due-date');
+const filterStatus = document.getElementById('filter-status');
+const applyFiltersBtn = document.getElementById('apply-filters');
+
+// Apply filters when the button is clicked
+applyFiltersBtn.addEventListener('click', () => {
+    applyFilters();
+});
+
+function applyFilters() {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    const filteredTasks = tasks.filter((task) => {
+        // Filter by priority
+        if (filterPriority.value && task.priority !== filterPriority.value) {
+            return false;
+        }
+
+        // Filter by due date
+        if (filterDueDate.value) {
+            const today = new Date();
+            const dueDate = new Date(task.dueDate);
+
+            if (
+                filterDueDate.value === '7-days' &&
+                (dueDate < today || (dueDate - today) / (1000 * 60 * 60 * 24) > 7)
+            ) {
+                return false;
+            }
+
+            if (filterDueDate.value === 'overdue' && dueDate >= today) {
+                return false;
+            }
+        }
+
+        // Filter by status
+        if (filterStatus.value) {
+            const isCompleted = filterStatus.value === 'completed';
+            if (task.completed !== isCompleted) {
+                return false;
+            }
+        }
+
+        return true;
+    });
+
+    // Clear current tasks display
+    pendingTasks.innerHTML = '';
+    completedTasks.innerHTML = '';
+
+    // Display only filtered tasks
+    filteredTasks.forEach((task, index) => displayTasks(task, index));
+}
+
+
+
 // Refresh tasks display
 function refresh() {
     pendingTasks.innerHTML = '';
